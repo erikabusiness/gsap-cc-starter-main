@@ -4,3 +4,6 @@
 
 2. `GsapFrom()`: O método gsap.from() é usado para animar elementos de um novo estado para seu estado atual.
 É semelhante ao método gsap.to(), mas a diferença é que o método gsap.from() anima elementos de um novo estado para seu estado atual, enquanto o método gsap.to() anima elementos de seu estado atual para um novo estado.
+
+3. `GsapFromTo`: O método gsap.fromTo() é usado para animar elementos de um novo estado para um novo estado.
+É semelhante aos métodos gsap.from() e gsap.to(), mas a diferença é que o método gsap.fromTo() anima elementos de um novo estado para um novo estado, enquanto o gsap O método .from() anima elementos de um novo estado para seu estado atual, e o método gsap.to() anima elementos de seu estado atual para um novo estado.

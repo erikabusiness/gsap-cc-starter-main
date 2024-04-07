@@ -1,6 +1,28 @@
-const GsapFromTo = () => {
-  // TODO: Implement the gsap.fromTo() method
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
+const GsapFromTo = () => {
+  // Utilizando useGSAP para iniciar a animação quando o componente for montado
+  useGSAP(() => {
+    // Animando as propriedades do elemento #red-box
+    gsap.fromTo(
+      '#red-box',
+      {
+        x: 0, // Posição inicial X
+        rotation: 0, // Rotação inicial
+        borderRadius: '0%' // Borda inicial (quadrada)
+      },
+      {
+        x: 250, // Posição final X
+        repeat: -1, // Repetir indefinidamente
+        yoyo: true, // Alternar entre o estado inicial e final
+        borderRadius: '100%', // Alterando a borda para transformar em um círculo
+        rotation: 360, // Rotacionando o elemento
+        duration: 2, // Duração da animação em segundos
+        ease: 'bounce.out' // Easing da animação (efeito de "quicada" no final)
+      }
+    );
+  }, []); // O array de dependências vazio assegura que a animação só seja iniciada uma vez quando o componente for montado
   return (
     <main>
       <h1>GsapFromTo</h1>
